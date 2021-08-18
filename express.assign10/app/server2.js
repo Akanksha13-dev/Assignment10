@@ -110,7 +110,7 @@ router.put('/:id', function (req, res) {
                     throw error;
                 }
                 else {
-                    var query = "UPDATE users SET \"first__name\"='" + firstName_1 + "', \"middle__name\"='" + middleName_1 + "', \"last__name\"='" + lastName_1 + "', \"email\"='" + email_1 + "', \"phone_number\"=" + phoneNumber_1 + ",\"role\"='" + role_1 + "', \"address\"='" + address_1 + "',\"customer_id\"='" + result.rows[0].id + "' where id=" + id + ";";
+                    var query = "UPDATE users SET \"first__name\"='" + firstName_1 + "', \"middle__name\"='" + middleName_1 + "', \"last__name\"='" + lastName_1 + "', \"email\"='" + email_1 + "', \"phone_number\"=" + phoneNumber_1 + ",\"role\"='" + role_1 + "', \"address\"='" + address_1 + "', \"datetime\"='"+dateTime_1+"',\"customer_id\"='" + result.rows[0].id + "' where id=" + id + ";";
                     console.log(query);
                     pool.query(query, function (error, result) {
                         if (error) {
